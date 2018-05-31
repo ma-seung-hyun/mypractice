@@ -20,11 +20,11 @@ var readyPos = function(){
 };
 
 window.addEventListener('DOMContentLoaded', function(){
-  computedStyleX();
-  readyPos();
+  // computedStyleX();
+  // readyPos();
 });
 window.addEventListener('resize', function(){
-  readyPos();
+  // readyPos();
 });
 
 })();

@@ -1,0 +1,123 @@
+.gnb,
+.gnb li a,
+.gnb li a .bar,
+.gnb .logo .bar,
+.gnb .logo a{
+  transition: all 0.3s ease;
+}
+h1,h2,h3{font-weight: normal;}
+html{height: 100%;}
+body{
+  font-family: 'Godo', sans-serif;
+  /* font-family: 'Noto Sans KR', 'Malgun Godic', sans-serif; */
+  font-weight: 400;
+  height: 100%;
+  letter-spacing: -1px;
+  color: #333;
+}
+.cwrap{
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.gnb{
+  width: 100%;height: 70px;
+  position: fixed; top: 0; z-index:9999;
+  background-color: rgba(255, 255, 255, 0.92); line-height: 70PX;
+}
+.gnb a{
+  color: #263232;
+}
+.gnb .logo{
+  font-weight: 400;
+  float: left;
+  font-size: 26px;
+  position: relative;
+  width: 185px;
+  height: 70px;
+}
+.gnb .logo a{
+  position: absolute; z-index: 9999;
+  background: url(../source/icon/logo_b.png) no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 0 20px;
+  opacity: 0.67;
+  width: 100%;
+  height: 100%;
+}
+
+.gnb .logo .bar{
+  display: inline-block;
+  width: 100%;
+  height: 100%; top: -100%;
+  padding: 0 10px; left: -8px;
+  position: absolute;
+  border-radius: 10px;
+
+  background: #30f264;
+  background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
+  background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
+  background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
+
+  opacity: 0.4;
+}
+.gnb .logo:hover a{
+  text-shadow: 2px 2px 4px rgba(97, 97, 97, 0.68);
+  color: #fff;
+  background: url(../source/icon/logo_w.png) no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 0 20px;
+  opacity: 1;
+}
+.gnb .logo:hover .bar{
+  top: -10px;
+  opacity: 0.6;
+}
+
+.gnb ul{
+  float: right;
+}
+.gnb ul li{
+  font-weight: normal;
+  display: inline-block;
+  float: left;
+  position: relative;
+  margin-left: 20px;
+}
+.gnb ul li a{
+  color: rgba(38, 50, 50, 0.57);
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.gnb ul li .bar{
+  position: absolute;
+  display: inline-block;
+  width: 0%; height: 4px;
+  background-color: rgba(38, 50, 50, 0.12);
+  bottom: 20px; left: 50%;
+}
+.gnb ul li a:hover{
+  color: #263232;
+}
+.gnb ul li a:hover .bar{
+  width: 100%; left: 0;
+  background-color: #263232;
+}
+
+
+
+
+.footer{
+  clear: both;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, 0.89);
+  height: 120px;
+  color: #fff;
+}

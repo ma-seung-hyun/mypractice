@@ -1,0 +1,104 @@
+.section{
+  clear: both;
+  display: block;
+  position: relative;
+}
+.section .video-area{
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+.section .video-area #vid1{
+  width: 100%; height: 800px;
+  object-fit: cover;
+  display: block;
+  top: 0; left: 0;
+  opacity: 0.4;
+  filter: blur(10px);
+  z-index: -9999;
+  transform: scale(1.1);
+}
+.section .video-area .v-dimd{
+  position: absolute; top: 0; left: 0;
+  background: #30f264;
+  background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
+  background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
+  background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
+  opacity: 0.5;
+  filter: blur(0px);
+  width: 100%; height: 800px;
+  display: block;
+}
+.section .video-area .htxt{
+  position: absolute; top: 324px; left: 0;
+  width: 100%; height: 200px;
+  text-align: center;
+}
+.section .video-area .htxt h1{
+  height: 100%;
+  background: url(../source/icon/logo2_w.png) no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.area-haeder{
+  text-align: center;
+}
+.area-haeder h2{
+  font-weight: normal;
+  color: #555;
+}
+.area-haeder .bar{
+  margin: 60px 0;
+  width: 50px; height: 3px;
+  display: inline-block;
+  background-color: #bebebe;
+  border-radius: 5px;
+}
+
+.introduce-area{
+  margin-top: 100px;
+}
+.introduce-ul{
+}
+.introduce-item{
+  width: 47.9%;
+  margin-right: 4%; margin-bottom: 4%;
+  height: 500px;
+  box-sizing: border-box;
+  float: left;
+}
+.introduce-item a{
+  color: #333;
+  display: inline-block;
+  width: 100%; height: 100%;
+}
+.introduce-item:nth-child(2n){
+  margin-right: 0;
+}
+
+.introduce-item-img{
+  width: 100%;
+  height: 60%;
+  display: block;
+  background-color: #aaa;
+}
+.introduce-item-txt{
+  padding: 40px;
+}
+.introduce-item-txt h3{
+  font-size: 18px;
+}
+.introduce-item-txt p{
+  font-size: 16px;
+  font-weight: normal;
+}
+.introduce-item-txt .bar{
+  display: inline-block;
+  width: 20px; height: 1px;
+  background-color: #aaa;
+  margin: 20px 0;
+}
