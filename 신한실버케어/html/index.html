@@ -12,35 +12,67 @@
   <title>군포 신한실버케어</title>
 </head>
 <body>
+  <div class="all-dimd">
+    <div class="dimd-bg"></div>
+    <div class="iframewrap">
+      <iframe class="dimd-video" width="800" height="450px" src="https://www.youtube.com/embed/wTIvu0reREo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+      <div class="dimd-close">
+        <div>
+          <span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="gnb">
     <div class="cwrap">
       <div class="logo"><a href="#" class="textdel">메인</a><span class="bar"></span></div>
       <ul>
         <li class="active"><a href="#">인사말<span class="bar"></span></a></li>
+        <li><a href="#">노인장기요양보험<span class="bar"></span></a></li>
         <li><a href="#">방문요양<span class="bar"></span></a></li>
         <li><a href="#">방문목욕<span class="bar"></span></a></li>
+        <li><a href="#">복지용구<span class="bar"></span></a></li>
         <li><a href="#">오시는길<span class="bar"></span></a></li>
-        <li><a href="#">기타항목<span class="bar"></span></a></li>
-        <li><a href="#">기타항목<span class="bar"></span></a></li>
       </ul>
     </div>
   </div>
 
   <div class="section">
     <div class="video-area">
-      <div class="v-dimd">
-      dd</div>
+      <div class="v-dimd"></div>
       <video id="vid1" muted loop autoplay>
         <source src="../source/video.mp4" type="video/mp4">
       </video>
       <div class="htxt">
-        <h1 class="textdel">군포신한실버케어</h1>
+        <p class="h1sub">어르신 복지요양 전문센터</p>
+        <h1 class="textdel">
+          군포신한실버케어
+          <span class="banner"></span>
+          <span class="shadow"></span>
+          <span class="brush"></span>
+        </h1>
+        <div class="video-btn">
+          <div class="cwrap">
+            <p>노인장기요양 - 보험편</p>
+            <button class="btn">동영상보기<span class="bar"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-area">
+      <div class="area-haeder">
+        <h2>안녕하세요 군포신한실버케어 입니다. ٩(ˊᗜˋ*)و </h2>
+        <span class="bar"></span>
+        <p></p>
       </div>
     </div>
 
     <div class="introduce-area">
       <div class="area-haeder">
-        <h2>군포신한실버케어에 오신것을 환영합니다. ٩(ˊᗜˋ*)و </h2>
+        <h2>저희 서비스에 대하여 알려드립니다.</h2>
         <span class="bar"></span>
         <p></p>
       </div>
@@ -50,9 +82,9 @@
             <a href="#">
               <div class="introduce-item-img"></div>
               <div class="introduce-item-txt">
-                <h3>인사말</h3>
+                <h3>노인장기요양보험</h3>
                 <span class="bar"></span>
-                <p>신한실버케어가 고객님께 드리고싶은 인사말입니다.</p>
+                <p>노인장기요양보험에 대한 간단한 설명이 들어갑니다.</p>
               </div>
             </a>
           </li>
@@ -62,7 +94,7 @@
               <div class="introduce-item-txt">
                 <h3>방문요양</h3>
                 <span class="bar"></span>
-                <p>신한실버케어가 고객님께 드리고싶은 인사말입니다.</p>
+                <p>방문요양에 대한 간단한 설명이 들어갑니다.</p>
               </div>
             </a>
           </li>
@@ -72,13 +104,32 @@
               <div class="introduce-item-txt">
                 <h3>방문목욕</h3>
                 <span class="bar"></span>
-                <p>신한실버케어가 고객님께 드리고싶은 인사말입니다.</p>
+                <p>방문목욕에 대한 간단한 설명이 들어갑니다.</p>
+              </div>
+            </a>
+          </li>
+          <li class="introduce-item">
+            <a href="#">
+              <div class="introduce-item-img"></div>
+              <div class="introduce-item-txt">
+                <h3>복지용구</h3>
+                <span class="bar"></span>
+                <p>복지용구에 대한 간단한 설명이 들어갑니다.</p>
               </div>
             </a>
           </li>
         </ul>
       </div>
     </div>
+
+    <div class="map-area">
+      <div class="area-haeder">
+        <h2>오시는 길</h2>
+        <span class="bar"></span>
+        <p></p>
+      </div>
+    </div>
+
   </div>
 
 
@@ -92,5 +143,20 @@
 <script>
 </script>
 <script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript">
+var dimd = new indexDimdVideo();
+
+window.addEventListener('DOMContentLoaded', function(){
+  dimd.position();
+  dimd.close();
+  dimd.open();
+});
+window.addEventListener('resize', function(){
+  dimd.position();
+
+});
+
+
+</script>
 </body>
 </html>
