@@ -99,7 +99,7 @@ body{
 }
 .gnb .logo a{
   position: absolute; z-index: 9999;
-  background: url(../source/icon/logo_b.png) no-repeat;
+  background: url(../source/icon/logo_b2.png) no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
   background-position: 0 20px;
@@ -127,7 +127,7 @@ body{
 .gnb .logo:hover a{
   text-shadow: 2px 2px 4px rgba(97, 97, 97, 0.68);
   color: #fff;
-  background: url(../source/icon/logo_w.png) no-repeat;
+  background: url(../source/icon/logo_w2.png) no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
   background-position: 0 20px;
