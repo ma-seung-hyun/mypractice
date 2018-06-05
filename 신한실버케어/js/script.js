@@ -22,8 +22,6 @@ var indexDimdVideo = function(){
 
   var clickBtn = document.querySelector('.video-btn button.btn');
 
-  // console.log(dimd,bg,video,clickBtn);
-
   return {
     position : function(){
       video.style.top =
@@ -44,13 +42,13 @@ var indexDimdVideo = function(){
   }
 }
 
-var readyPos = function(){
-};
 
 window.addEventListener('DOMContentLoaded', function(){
   computedStyleX();
 });
 window.addEventListener('resize', function(){
 });
+
+
 
 // })();

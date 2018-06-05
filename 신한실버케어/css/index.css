@@ -3,6 +3,11 @@
   display: block;
   position: relative;
 }
+
+
+
+
+/*------------------------------------------------------- 메인, 비디오 */
 .section .video-area{
   display: block;
   background-color: #fff;
@@ -12,6 +17,7 @@
   position: relative;
 }
 .section .video-area #vid1{
+
   width: 100%; height: 800px;
   object-fit: cover;
   display: block;
@@ -70,6 +76,23 @@
   background-size: contain;
   opacity: 0.35;
   z-index: 0;
+}
+.section .video-area .htxt .numbers{
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.49);
+  font-size: 18px;
+  margin-top: 80px;
+  line-height: 30px;
+}
+.section .video-area .htxt .numbers .tel-icon{
+  position: relative; top: 10px;
+  margin-right: 10px;
+  width: 35px; height: 35px;
+  display: inline-block;
+  background: url(../source/icon/tel.png) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 .section .video-area .htxt .video-btn{
@@ -145,40 +168,176 @@
 
 
 
+/* ---------------------------------------인사말  */
+
+.intro-area{
+
+}
+.introbox{
+  margin: 0 0 0 auto;
+  width: 827px;
+  height: 600px;
+  position: relative;
+}
+.intro-borderbox{
+  position: relative;
+  width: 100%; height: 100%;
+  margin-top: 100px;
+}
+.intro-borderbox-border{
+  width: 100%; height: 100%;
+  background: #30f264;
+  background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
+  background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
+  background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
+  position: absolute;
+  opacity: 0.35;
+}
+.intro-borderbox-white{
+  position: absolute; top: 30px; left: 30px;
+  width: 767px; height: 540px;
+  background-color: #fff;
+}
+.intro-model{
+  width: 440px; height: 659px;
+  position: absolute; right: 40px; bottom: 31px;
+  /* display: none; */
+}
+.intro-model img{
+  width: 100%;
+}
+.intro-textbox{
+  width: 360px;
+  display: inline-block;
+  position: absolute;
+  background-color: #fff;
+  top: 78px; left: -173px;
+  padding: 50px 0;
+}
+.intro-textbox .tb1{
+  font-size: 20px;
+  position: relative;
+}
+.intro-textbox .tb2{
+  font-size: 25px;
+  margin: 10px 0;
+  position: relative;
+}
+.intro-textbox .tb2 strong{
+  font-size: 50px; color: #132166;
+}
+.intro-textbox p.planetxt{
+  font-weight: lighter;
+  line-height: 30px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+/* -----------------------------------------소개 3가지 */
 .introduce-area{
 }
 .introduce-ul{
 }
 .introduce-item{
-  width: 47.9%;
-  margin-right: 4%; margin-bottom: 4%;
+  position: relative;
+  width: 300px;
+  margin-right: 50px;
   height: 500px;
   box-sizing: border-box;
   float: left;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid #fff;
+}
+.introduce-dimd{
+  width: 100%; height: 100%;
+  background-color: #fff;
+  position: absolute; z-index: 3; top: 0; left: 0; opacity: 0;
+}
+.introduce-item:nth-child(3){
+  margin-right: 0;
 }
 .introduce-item a{
-  color: #333;
+  color: #444;
   display: inline-block;
   width: 100%; height: 100%;
 }
-.introduce-item:nth-child(2n){
-  margin-right: 0;
-}
-
 .introduce-item-img{
   width: 100%;
   height: 60%;
   display: block;
   background-color: #aaa;
+  overflow: hidden;
 }
+.introduce-item-img div{
+  width: 100%; height: 100%;
+  transition: all 1.3s ease;
+  filter: grayscale(0.7);
+}
+
+.introduce-item:nth-child(1) .introduce-item-img div{
+  background: url(../source/img/index4.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.introduce-item:nth-child(2) .introduce-item-img div{
+  background: url(../source/img/index1.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.introduce-item:nth-child(3) .introduce-item-img div{
+  background: url(../source/img/index3.jpg) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.introduce-item:nth-child(1):hover{
+  box-shadow: 15px 15px 0 rgba(55, 209, 117, 0.8);
+  border: 3px solid rgba(55, 209, 117, 0.3);
+}
+.introduce-item:nth-child(2):hover{
+  box-shadow: 15px -15px 0 rgba(55, 209, 172, 0.8);
+  border: 3px solid rgba(55, 209, 172, 0.3);
+}
+.introduce-item:nth-child(3):hover{
+  box-shadow: -15px 15px 0 rgba(137, 205, 60, 0.75);
+  border: 3px solid rgba(137, 205, 60, 0.3);
+}
+.introduce-item:nth-child(1):hover .introduce-item-txt{
+  color: rgba(26, 111, 60, 1);
+}
+.introduce-item:nth-child(2):hover .introduce-item-txt{
+  color: rgba(31, 111, 91, 1);
+}
+.introduce-item:nth-child(3):hover .introduce-item-txt{
+  color: rgba(66, 101, 28, 1);
+}
+.introduce-item:hover .introduce-dimd{
+  opacity: 0.1;
+}
+.introduce-item:hover .introduce-item-img div{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
 .introduce-item-txt{
-  padding: 40px;
+  padding: 25px;
+  margin-top: 10px;
 }
 .introduce-item-txt h3{
   font-size: 22px;
 }
 .introduce-item-txt p{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   font-weight: lighter;
   font-family: 'NanumSquare', sans-serif;
@@ -196,4 +355,64 @@
 
 .map-area{
   clear: both;
+}
+.map-img{
+  width: 780px; height: 780px;
+  /* border: 1px solid #000; */
+  margin:  0 auto;
+  display: block;
+  background: url(../source/img/map.png) no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.map-a{
+  margin-top: 50px;
+}
+.map-a a{
+  border-radius: 200px;
+  display: inline-block;
+  margin: 0px 40px;
+  padding: 25px 32px 25px 75px;
+  position: relative;
+}
+.map-a .map-download{
+  color: #fff;
+  background-color: #666;
+  border: 4px solid #666;
+
+}
+.map-a .map-naver{
+  color: #fff;
+  background-color: #00c73c;
+  border: 4px solid #00c73c;
+  box-sizing: border-box;
+}
+.map-a a .icon{
+  position: absolute; left: 30px;top: 16px;
+  width: 35px; height: 35px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.map-a .map-download .icon{
+  background: url(../source/icon/download.png) no-repeat;
+  background-position: 0 3px;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.map-a .map-naver .icon{
+  background: url(../source/icon/naver.png) no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.map-a .map-download:hover{
+  background-color: #222;
+  border: 4px solid #222;
+}
+.map-a .map-naver:hover{
+  background-color: #fff;
+  color: #00c73c;
+}
+.map-a .map-naver:hover .icon{
+  background-position: -35px 0;
 }
