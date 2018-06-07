@@ -17,7 +17,6 @@
   position: relative;
 }
 .section .video-area #vid1{
-
   width: 100%; height: 800px;
   object-fit: cover;
   display: block;
@@ -59,7 +58,7 @@
 }
 .section .video-area .htxt h1 .banner{
   width: 100%; height: 100%;
-  background: url(../source/icon/logo2_w2.png) no-repeat center;
+  background: url(../../source/icon/logo2_w2.png) no-repeat center;
   -webkit-background-size: contain;
   background-size: contain;
   position: absolute;
@@ -71,7 +70,7 @@
   position: absolute;
   top: -150px; left: 0;
   width: 100%; height: 550px;
-  background: url(../source/icon/indexbrush.png) no-repeat center;
+  background: url(../../source/icon/indexbrush.png) no-repeat center;
   -webkit-background-size: contain;
   background-size: contain;
   opacity: 0.35;
@@ -90,7 +89,7 @@
   margin-right: 10px;
   width: 35px; height: 35px;
   display: inline-block;
-  background: url(../source/icon/tel.png) no-repeat;
+  background: url(../../source/icon/tel.png) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -284,17 +283,17 @@
 }
 
 .introduce-item:nth-child(1) .introduce-item-img div{
-  background: url(../source/img/index4.jpg) no-repeat center;
+  background: url(../../source/img/index4.jpg) no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 .introduce-item:nth-child(2) .introduce-item-img div{
-  background: url(../source/img/index1.jpg) no-repeat center;
+  background: url(../../source/img/index1.jpg) no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 .introduce-item:nth-child(3) .introduce-item-img div{
-  background: url(../source/img/index3.jpg) no-repeat center;
+  background: url(../../source/img/index3.jpg) no-repeat center;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -361,9 +360,44 @@
   /* border: 1px solid #000; */
   margin:  0 auto;
   display: block;
-  background: url(../source/img/map.png) no-repeat;
+  background: url(../../source/img/map.png) no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
+}
+.map-ex{
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 40px;
+  text-align: left;
+  /* line-height: 40px; */
+  line-height: 0;
+  position: relative;
+  text-indent:140px;
+}
+.map-ex .subway1, .map-ex .subway2{
+  position: absolute;top: 0; left: 0;
+  width: 120px; height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+.map-ex .subway1{
+  background: url(../../source/icon/subway1.png) no-repeat;
+  -webkit-background-size: contain;
+}
+.map-ex .subway2{
+  background: url(../../source/icon/subway2.png) no-repeat;
+  -webkit-background-size: contain;
+}
+
+.map-ex-text{
+  position: absolute;top: 20px; left: 0;
+}
+.map-ex-text .buscolor{
+  font-weight: bold;
+  color: #000;
+  /* background-color: #f99d1c; */
+  border-bottom: 3px solid #f99d1c;
 }
 .map-a{
   margin-top: 50px;
@@ -379,7 +413,6 @@
   color: #fff;
   background-color: #666;
   border: 4px solid #666;
-
 }
 .map-a .map-naver{
   color: #fff;
@@ -394,13 +427,13 @@
   margin-bottom: 5px;
 }
 .map-a .map-download .icon{
-  background: url(../source/icon/download.png) no-repeat;
+  background: url(../../source/icon/download.png) no-repeat;
   background-position: 0 3px;
   -webkit-background-size: contain;
   background-size: contain;
 }
 .map-a .map-naver .icon{
-  background: url(../source/icon/naver.png) no-repeat;
+  background: url(../../source/icon/naver.png) no-repeat;
   background-position: 0 0;
   -webkit-background-size: cover;
   background-size: cover;
@@ -416,3 +449,20 @@
 .map-a .map-naver:hover .icon{
   background-position: -35px 0;
 }
+
+
+
+
+
+/*----------------------------------------- media query */
+
+@media screen and (max-width : 1000px){
+
+
+
+body{
+  /* display: none; */
+}
+
+
+}/* media */

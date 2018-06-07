@@ -38,15 +38,42 @@ var indexDimdVideo = function(){
       dimd.addEventListener('click', function(){
         dimd.classList.remove('dimdon');
       });
+    }//returnobj
+  };
+};
+
+var mobileLayoutFunction = function(){
+  var gnblogo = gnb.getElementsByClassName('logo')[0];
+  var webVer = function(){
+    gnblogo.style.height = 70 + 'px';
+  };
+  var media = function(fn){
+    console.log(window.innerWidth);
+    if(window.innerWidth <= 1001){
+      fn();
+    }else{
+      webVer();
     }
-  }
-}
+  };
+  return{
+    gnbSet : function(){
+      media(function(){
+        console.log(style(gnblogo)['width'].split('px')[0]);
+        gnblogo.style.height = style(gnblogo)['width'].split('px')[0] * 0.16 +'px';
+        console.log(style(gnblogo)['width'].split('px')[0] * 0.16);
+      });
+    }
+  };
+};
+var mobileLayout = new mobileLayoutFunction();
 
 
 window.addEventListener('DOMContentLoaded', function(){
   computedStyleX();
+  // mobileLayout.gnbSet();
 });
 window.addEventListener('resize', function(){
+  // mobileLayout.gnbSet();
 });
 
 
