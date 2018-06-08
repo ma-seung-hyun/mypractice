@@ -1,0 +1,31 @@
+html{
+  height: 100%;
+}
+body{
+  background-color: #ddd;
+  width: 100%; height: 100%;
+}
+.gnb{
+  width: 66%; height: 100%;
+  position: fixed; right: 0;
+  background-color: #fff;
+  opacity: 0.9;
+}
+.gnb .m-togglebtn{
+  width: 60px; height: 60px;
+  display: inline-block;
+  position: absolute; top: 0 ; left: -60px;
+  background-color: #fff;
+}
+.gnb .m-togglebtn span{
+  display: block;
+  border: 1px solid #000;
+  width: 100%; height: 100%;
+  background-color: #d3d;
+}
+.gnb ul{
+  border: 1px solid #000;
+}
+.gnb ul li{
+  border: 1px solid #000;
+}
