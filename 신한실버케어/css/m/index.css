@@ -1,0 +1,93 @@
+.gnb,
+.dimd-bg,
+.gnb .m-togglebtn span{
+  transition: all 0.3s ease;
+}
+
+html{
+  height: 100%;
+}
+body{
+  background-color: #ddd;
+  width: 100%; height: 100%;
+  font-family: 'Godo', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.section{
+ height: 100%;
+}
+.video-area{
+  width: 100%; height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.v-dimd{
+  width: 100%; height: 100%;
+  background: #30f264;
+  background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
+  background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
+  background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
+  opacity: 0.4;
+  z-index: 2;
+  position: absolute; top: 0; left: 0;
+}
+#vid1{
+  filter: blur(7px);
+  transform: scale(1.1);
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.section .htxt{
+  width: 100%; height: 100%;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+.section .h1sub{
+  margin-top: 50%;
+  font-size: 5vw;
+}
+.section h1{
+  display: inline-block;
+  width: 75%; height: 30%;
+  position: relative;
+}
+.section h1 .banner{
+  position: absolute;
+  width: 100%; height: 100%;
+  display: block;
+  background: url(../../source/icon/logo2_w2.png) no-repeat center;
+  background-size: contain;
+  z-index: 20;
+}
+.section h1 .brush{
+  position: absolute;
+  display: block;
+  width: 100%; height: 100%;
+  background: url(../../source/icon/indexbrush.png) no-repeat center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  transform: scale(1.6);
+  opacity: 0.5;
+}
+.section .htxt{
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+.section .video-btn{
+}
+.section .video-btn p{
+  margin: 12% 0;
+}
+.section .video-btn a{
+  display: inline-block;
+  padding: 4% 8%;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.57);
+  border-radius: 5000px;
+}

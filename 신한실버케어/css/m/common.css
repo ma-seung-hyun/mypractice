@@ -1,49 +1,91 @@
-.gnb .m-togglebtn span{
-  transition: all 0.3s ease;
-}
-
-html{
-  height: 100%;
-}
-body{
-  background-color: #ddd;
-  width: 100%; height: 100%;
-  font-family: 'Godo', sans-serif;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
 .gnb{
   width: 70%; height: 100%;
-  position: fixed; right: 0;
+  position: fixed; right: -70%;
   background-color: #fff;
-  opacity: 0.9;
+  opacity: 0.4;
+  z-index: 9999;
 }
 .gnb .m-togglebtn{
   display: inline-block;
-  position: absolute; top: 0 ; left: -27%;
+  position: absolute; top: 0 ; left: 0;
   background-color: #fff;
   border-radius: 0 0 0 30%;
-
 }
 .gnb .m-togglebtn span{
   display: block;
-  margin: 10% 0 0 10%;
-  width: 80%; height: 80%;
+  margin: 18% 0 0 24%;
+  width: 60%; height: 60%;
   background: url(../../source/icon/menu.png) no-repeat;
   background-size: cover;
-  border: 1px solid #d3d;
-  background-position: 100% 0;
+  background-position: 0 0;
 }
-.gnb ul{
+
+.gnb.on{
+  right: 0;
+  opacity: 0.95;
+}
+.gnb.on .m-togglebtn span{
+  background-position: 100% 0;
+  opacity: 0.6;
+}
+.gnb-now a{
+  color: #000 !important;
+}
+.gnb-now::before{
+  position: absolute;
+  top: 47%; left: 7%;
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  background-color: #d1d1d1;
+  border-radius: 2px
+}
+.gnb-now::after{
+  content: '현재';
+  display: inline-block;
+  padding: 2% 3%;
+  position: absolute; top: 27%;right: 15%;
+  border: 1px solid #3dd792;
+  border-radius: 5px;
+  color: #30c482;
 }
 .gnb ul li{
+  text-shadow: 1px 1px 2px rgba(0, 19, 15, 0.1);
+  position: relative;
+}
+.gnb ul li:hover a{
+  background: #30f264;
+  background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
+  background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
+  background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
+  color: #fff;
 }
 .gnb ul li a{
   display: inline-block;
   width: 100%; height: 100%;
-
-  padding: 7% 0 7% 10%;
+  padding: 7% 0 7% 15%;
   color: rgba(0, 0, 0, 0.51);
   font-size: 7vw;
-  /* border-bottom: 1px solid #f1f1f1; */
+}
+.all-dimd{
+  width: 100%; height: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: none;
+}
+.dimd-bg{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -9999;
+  display: none;
+}
+.all-dimd.on{
+  display: block;
+}
+.all-dimd.on .dimd-bg{
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 8888;
+  display: block;
 }

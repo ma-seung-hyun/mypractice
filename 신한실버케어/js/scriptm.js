@@ -11,27 +11,44 @@ var style = function(el,pr){
 }
 
 
-var mobileLayoutFunction = function(){
+var mobileIndexFunction = function(){
   var gnb = document.getElementsByClassName('gnb')[0],
       gnbCloseBtn = gnb.getElementsByClassName('m-togglebtn')[0],
-      gnbItem = document.querySelector('.gnb > ul > li');
-
-
+      gnbItem = document.querySelector('.gnb > ul > li'),
+      dimd = document.getElementsByClassName('all-dimd')[0];
   return{
     gnbSet : function(){
       gnbCloseBtn.style.height = style(gnbItem)['height'];
       gnbCloseBtn.style.width = style(gnbItem)['height'];
-      gnbCloseBtn.style.left = '-' + style(gnbItem)['height'];
-    }
+      gnbCloseBtn.style.left =
+      '-' + parseInt(style(gnbItem)['height'].split('px')[0]) + 'px';
+    },
+    gnbClick : function(){
+      gnbCloseBtn.addEventListener('click',function(){
+        if(gnb.classList.contains('on')){
+          gnb.classList.remove('on');
+          dimd.classList.remove('on');
+        }else{
+          gnb.classList.add('on');
+          dimd.classList.add('on');
+        }
+      });
+      dimd.addEventListener('click', function(){
+        console.log('dimdclick');
+        gnb.classList.remove('on');
+        dimd.classList.remove('on');
+      });
+    } //return
   };
 };
 
-var mobileLayout = new mobileLayoutFunction();
+var mobileIndex = new mobileIndexFunction();
 
 window.addEventListener('DOMContentLoaded', function(){
   computedStyleX();
-  mobileLayout.gnbSet();
+  mobileIndex.gnbSet();
+  mobileIndex.gnbClick();
 });
 window.addEventListener('resize', function(){
-  mobileLayout.gnbSet();
+  mobileIndex.gnbSet();
 });
