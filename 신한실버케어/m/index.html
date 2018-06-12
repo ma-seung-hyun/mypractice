@@ -30,7 +30,7 @@
   </div>
 
   <div class="gnb">
-    <ul>
+    <ul class="gnb-link">
       <li class="gnb-now"><a href="#">홈</a></li>
       <li><a href="#">공지사항</a></li>
       <li><a href="#">방문요양</a></li>
@@ -38,12 +38,17 @@
       <li><a href="#">복지용구</a></li>
       <li><a href="#">오시는길</a></li>
     </ul>
+    <!-- <div class="number">
+      <a href="tel:010-1234-5678">전화하기</a>
+      <a href="sms:010-4945-1051">문자보내기</a>
+    </div> -->
     <span class="m-togglebtn textdel">
       버튼
      <span></span>
     </span>
   </div>
   <div class="section">
+
     <div class="video-area">
       <div class="v-dimd"></div>
       <video id="vid1" type="video/mp4" autoplay muted loop>
@@ -58,31 +63,25 @@
           <span class="brush"></span>
         </h1>
         <div class="video-btn">
-          <div class="cwrap">
-            <p>노인장기요양 - 보험편</p>
-            <a href="#" target="_blank">동영상보기</a>
-          </div>
+          <p>노인장기요양 - 보험편</p>
+          <a href="#" target="_blank">동영상보기</a>
         </div>
       </div>
     </div>
 
     <div class="intro-area">
-      <div class="area-haeder">
-        <h2>안녕하세요 군포신한실버케어 입니다. ଘ(੭*ˊᵕˋ)੭</h2>
-        <span class="bar"></span>
-      </div>
       <div class="cwrap">
         <div class="introbox">
-          <div class="intro-borderbox">
-            <div class="intro-borderbox-border"></div>
-            <div class="intro-borderbox-white"></div>
-          </div>
-          <div class="intro-model">
-            <!-- <img src="../source/img/model.png" alt="사진"> -->
-          </div>
           <div class="intro-textbox">
-            <div class="tb1">안녕하세요,<br>전문요양보호사</div>
-            <div class="tb2"><strong>문금순</strong> 입니다.</div>
+            <div class="intro-borderbox">
+              <div class="intro-header">
+                <div class="tb1">안녕하세요,<br>전문요양보호사</div>
+                <div class="tb2"><strong>문금순</strong> 입니다.</div>
+              </div>
+              <div class="intro-borderbox-border"></div>
+              <div class="intro-borderbox-white"></div>
+              <div class="intro-model"></div>
+            </div>
             <p class="planetxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
               irure dolor in reprehenderit</p>
           </div>
@@ -90,59 +89,57 @@
       </div>
     </div>
 
-    <!-- <div class="introduce-area">
-      <div class="area-haeder">
+    <div class="introduce-area">
+      <div class="area-header">
         <h2>저희 서비스에 대하여 알려드립니다.</h2>
         <span class="bar"></span>
       </div>
-      <div class="cwrap">
-        <ul class="introduce-ul">
-          <li class="introduce-item">
-            <a href="#">
-              <div class="introduce-dimd"></div>
-              <div class="introduce-item-img">
-                <div></div>
-              </div>
-              <div class="introduce-item-txt">
-                <h3>방문요양</h3>
-                <span class="bar"></span>
-                <p>방문요양에 대한 간단한 설명이 들어갑니다.</p>
-              </div>
-            </a>
-          </li>
-          <li class="introduce-item">
-            <a href="#">
-              <div class="introduce-dimd"></div>
-              <div class="introduce-item-img">
-                <div></div>
-              </div>
-              <div class="introduce-item-txt">
-                <h3>방문목욕</h3>
-                <span class="bar"></span>
-                <p>방문목욕에 대한 간단한 설명이 들어갑니단한 설명이 들어갑니다.</p>
-              </div>
-            </a>
-          </li>
-          <li class="introduce-item">
-            <a href="#">
-              <div class="introduce-dimd"></div>
-              <div class="introduce-item-img">
-                <div></div>
-              </div>
-              <div class="introduce-item-txt">
-                <h3>복지용구</h3>
-                <span class="bar"></span>
-                <p>복지용구에 대한 간단한 설명이 들어갑명이 들어갑니다.</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="introduce-ul">
+        <li class="introduce-item">
+          <a href="#">
+            <div class="introduce-dimd"></div>
+            <div class="introduce-item-img">
+              <div></div>
+            </div>
+            <div class="introduce-item-txt">
+              <h3>방문요양</h3>
+              <span class="bar"></span>
+              <p class="planetxt">방문요양에 대한 간단한 설명이 들어갑니다.</p>
+            </div>
+          </a>
+        </li>
+        <li class="introduce-item">
+          <a href="#">
+            <div class="introduce-dimd"></div>
+            <div class="introduce-item-img">
+              <div></div>
+            </div>
+            <div class="introduce-item-txt">
+              <h3>방문목욕</h3>
+              <span class="bar"></span>
+              <p class="planetxt">방문목욕에 대한 간단한 설명이 들어갑니다.</p>
+            </div>
+          </a>
+        </li>
+        <li class="introduce-item">
+          <a href="#">
+            <div class="introduce-dimd"></div>
+            <div class="introduce-item-img">
+              <div></div>
+            </div>
+            <div class="introduce-item-txt">
+              <h3>복지용구</h3>
+              <span class="bar"></span>
+              <p class="planetxt">복지용구에 대한 간단한 설명이 들어갑니다.</p>
+            </div>
+          </a>
+        </li>
+      </ul>
       <span class="clearboth"></span>
     </div>
 
-    <div class="map-area">
-      <div class="area-haeder">
+    <!-- <div class="map-area">
+      <div class="area-header">
         <h2>오시는 길</h2>
         <span class="bar"></span>
         <p></p>
@@ -160,8 +157,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div> -->
+    </div> -->
+  </div>
 
   <!-- <div class="footer">
     <div class="cwrap">

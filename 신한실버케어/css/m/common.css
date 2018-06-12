@@ -1,3 +1,22 @@
+html{
+  height: 100%;
+}
+body{
+  /* background-color: #ddd; */
+  width: 100%; height: 100%;
+  font-family: 'Godo', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.vw;
+}
+.cwrap{
+  width: 88%;
+  /* height: 100%; */
+  margin:  0 auto;
+}
+.planetxt{
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: lighter;
+}
 .gnb{
   width: 70%; height: 100%;
   position: fixed; right: -70%;
@@ -13,7 +32,7 @@
 }
 .gnb .m-togglebtn span{
   display: block;
-  margin: 18% 0 0 24%;
+  margin: 18% 0 0 23%;
   width: 60%; height: 60%;
   background: url(../../source/icon/menu.png) no-repeat;
   background-size: cover;
@@ -25,8 +44,8 @@
   opacity: 0.95;
 }
 .gnb.on .m-togglebtn span{
-  background-position: 100% 0;
-  opacity: 0.6;
+  background-position: 102% 0;
+  opacity: 0.4;
 }
 .gnb-now a{
   color: #000 !important;
@@ -45,28 +64,36 @@
   display: inline-block;
   padding: 2% 3%;
   position: absolute; top: 27%;right: 15%;
-  border: 1px solid #3dd792;
-  border-radius: 5px;
+  border: 0.3vw solid #3dd792;
+  border-radius: 1vw;
   color: #30c482;
+  font-size: 4vw;
 }
-.gnb ul li{
+.gnb ul.gnb-link li{
   text-shadow: 1px 1px 2px rgba(0, 19, 15, 0.1);
   position: relative;
 }
-.gnb ul li:hover a{
+.gnb ul.gnb-link li:hover a{
   background: #30f264;
   background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
   background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
   background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
-  color: #fff;
+  color: #fff !important;
 }
-.gnb ul li a{
+.gnb ul.gnb-link li a{
   display: inline-block;
   width: 100%; height: 100%;
   padding: 7% 0 7% 15%;
   color: rgba(0, 0, 0, 0.51);
   font-size: 7vw;
+}
+.gnb .number{
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0; right: 0;
+  border: 1px solid #000;
 }
 .all-dimd{
   width: 100%; height: 100%;
@@ -88,4 +115,22 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 8888;
   display: block;
+}
+
+
+.area-header{
+  text-align: center;
+  margin: 20% 0;
+}
+.area-header h2{
+  line-height: 10vw;
+  font-size: 6vw;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 10%;
+}
+.area-header .bar{
+  width: 10%; height: 2px;
+  display: inline-block;
+  background-color: rgb(180, 180, 180); border-radius: 500px;
 }
