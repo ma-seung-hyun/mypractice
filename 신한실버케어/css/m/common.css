@@ -1,31 +1,49 @@
+.gnb .m-togglebtn span{
+  transition: all 0.3s ease;
+}
+
 html{
   height: 100%;
 }
 body{
   background-color: #ddd;
   width: 100%; height: 100%;
+  font-family: 'Godo', sans-serif;
+  font-weight: 400;
+  letter-spacing: -1px;
 }
 .gnb{
-  width: 66%; height: 100%;
+  width: 70%; height: 100%;
   position: fixed; right: 0;
   background-color: #fff;
   opacity: 0.9;
 }
 .gnb .m-togglebtn{
-  width: 60px; height: 60px;
   display: inline-block;
-  position: absolute; top: 0 ; left: -60px;
+  position: absolute; top: 0 ; left: -27%;
   background-color: #fff;
+  border-radius: 0 0 0 30%;
+
 }
 .gnb .m-togglebtn span{
   display: block;
-  border: 1px solid #000;
-  width: 100%; height: 100%;
-  background-color: #d3d;
+  margin: 10% 0 0 10%;
+  width: 80%; height: 80%;
+  background: url(../../source/icon/menu.png) no-repeat;
+  background-size: cover;
+  border: 1px solid #d3d;
+  background-position: 100% 0;
 }
 .gnb ul{
-  border: 1px solid #000;
 }
 .gnb ul li{
-  border: 1px solid #000;
+}
+.gnb ul li a{
+  display: inline-block;
+  width: 100%; height: 100%;
+
+  padding: 7% 0 7% 10%;
+  color: rgba(0, 0, 0, 0.51);
+  font-size: 7vw;
+  /* border-bottom: 1px solid #f1f1f1; */
 }
