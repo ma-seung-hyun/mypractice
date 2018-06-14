@@ -21,7 +21,7 @@ body{
   width: 70%; height: 100%;
   position: fixed; right: -70%;
   background-color: #fff;
-  opacity: 0.4;
+  opacity: 0.6;
   z-index: 9999;
 }
 .gnb .m-togglebtn{
@@ -29,6 +29,8 @@ body{
   position: absolute; top: 0 ; left: 0;
   background-color: #fff;
   border-radius: 0 0 0 30%;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .gnb .m-togglebtn span{
   display: block;
@@ -42,6 +44,9 @@ body{
 .gnb.on{
   right: 0;
   opacity: 0.95;
+}
+.gnb.on .m-togglebtn{
+  border: none;
 }
 .gnb.on .m-togglebtn span{
   background-position: 102% 0;
