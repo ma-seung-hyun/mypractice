@@ -31,23 +31,23 @@
   width: 100%; height: 100%;
   object-fit: cover;
 }
-.section .htxt{
+.video-area .htxt{
   width: 100%; height: 50%;
   z-index: 20;
   position: absolute;
   top: 0;
   text-align: center;
 }
-.section .h1sub{
+.htxt .h1sub{
   font-size: 5vw;
   margin-bottom: 5%;
 }
-.section h1{
+.htxt h1{
   display: inline-block;
   width: 100%;height: 46%;
   position: relative;
 }
-.section h1 .banner{
+.htxt h1 .banner{
   position: absolute;
   width: 100%; height: 100%;
   display: block;
@@ -55,7 +55,7 @@
   background-size: contain;
   z-index: 20;
 }
-.section h1 .brush{
+.htxt h1 .brush{
   position: absolute;
   display: block;
   width: 100%; height: 100%;
@@ -65,18 +65,18 @@
   transform: scale(1.7);
   opacity: 0.5;
 }
-.section .htxt{
+.video-area .htxt{
   color: #fff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
 }
-.section .video-btn{
+.video-area .video-btn{
 }
-.section .video-btn p{
+.video-area .video-btn p{
   font-size: 4vw;
   margin: 11% 0;
 }
-.section .video-btn a{
+.video-area .video-btn a{
   font-size: 4vw;
   display: inline-block;
   padding: 4% 8%;
@@ -156,6 +156,7 @@
 .introduce-area{
   /* border: 1px solid #000; */
   /* height: 100%; */
+  /* margin-bottom: 20%; */
 }
 .introduce-ul{
   /* border: 1px solid #000; */
@@ -165,20 +166,23 @@
   box-sizing: border-box;
   padding: 20% 5% 6%;
   filter : grayscale(0.55);
-  margin-bottom: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+.introduce-item:last-child{
+  border-bottom: 1px solid rgba(143, 143, 143, 0.59);
 }
 .introduce-item:nth-child(1){
-  background: url(../../source/img/index1.jpg) no-repeat;
+  background: url(../../source/img/index1blur.jpg) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 .introduce-item:nth-child(2){
-  background: url(../../source/img/index2.jpg) no-repeat;
+  background: url(../../source/img/index2blur.jpg) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 .introduce-item:nth-child(3){
-  background: url(../../source/img/index3.jpg) no-repeat;
+  background: url(../../source/img/index3blur.jpg) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
