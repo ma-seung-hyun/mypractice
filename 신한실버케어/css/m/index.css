@@ -1,7 +1,7 @@
 .gnb,
 .dimd-bg,
 .gnb .m-togglebtn span{
-  transition: all 0.3s ease;
+  transition:   all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 
