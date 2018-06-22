@@ -1,0 +1,101 @@
+html,body{
+  height: 100%;
+  background-color: #333;
+}
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.1em;
+}
+
+
+
+
+.allwrap{
+  height: 100%;
+}
+.cwrap{
+  width: 95%; margin: 0 auto;
+}
+.swipe-area{
+  height: 100%;
+  position: relative;
+}
+
+
+.swipe-nav{
+  position: fixed;
+  width: 100%;
+  color: #fff;
+}
+.nav-top{
+  width: 100%;
+  position: relative;  top: 5%;
+}
+.nav-middle{
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; top: 25%;
+}
+.nav-hellouser{
+  position: absolute;
+  top: 0; left: 5%;
+  font-size: 23px;
+  font-weight: lighter;
+  opacity: 0.6;
+}
+.nav-menu{
+  width: 26px; height: 26px;
+  position: absolute; top: 0; right: 5%;
+}
+.nav-menu a{
+  display: inline-block;
+  width: 100%; height: 100%;
+  background-color: #fff;
+}
+
+.nav-list{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8%;
+}
+.nav-item{
+  opacity: 0.6;
+  display: inline-block;
+  padding:  2% 3%;
+  border-bottom: 1px solid #fff;
+}
+.nav-item a{
+  color: #fff;
+  font-size: 4.3vw;
+}
+.nav-item.active{
+  opacity: 1;
+  font-weight: bold;
+}
+
+
+
+.scroll-wrap{
+  width: 100%;
+  display: none;
+}
+.scroll-item{
+  float: left;
+  width: 0; height: 100%;
+  background-color: #d3d;
+  display: inline-block;
+}
+.scroll-item{
+  float: left;
+  width: 0; height: 100%;
+  background-color: #d3d;
+  display: inline-block;
+}
+.scroll-item:nth-child(2){
+  background-color: #ff1;
+}
+.scroll-item:nth-child(3){
+  background-color: #3d3;
+}
