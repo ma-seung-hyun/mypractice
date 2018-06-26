@@ -131,6 +131,12 @@ li{list-style: none;}
 .flr{
   float: right;
 }
+.fwb{
+  font-weight: bold;
+}
+.fwl{
+   font-weight: lighter;
+}
 img{vertical-align: middle;}
 
 
