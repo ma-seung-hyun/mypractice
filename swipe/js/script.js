@@ -61,6 +61,7 @@ var resetParallax = function(){
     nav1.style.opacity = 1;
     nav2.style.top = nav1t + 'px';
     nav2.classList.remove('active');
+    nav3[i].classList.remove('active');
     bg.style.top = 0;
     swiperSlide[i].scrollTop = 0;
   };
