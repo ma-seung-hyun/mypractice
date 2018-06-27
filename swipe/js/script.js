@@ -1,4 +1,4 @@
-(function(){
+// (function(){
 //
 
 var nav = document.getElementsByClassName('swipe-nav')[0],
@@ -17,14 +17,17 @@ var mySwiper = new Swiper ('.swiper-container', {
   loop: false
 });
 
-var swipeScrollParallax = function(){
-  for(let i = 0; i < swiperSlide.length; ++i){
-    swiperSlide[i].addEventListener('scroll', function(){
-      let _this = this,
-          h2 = _this.getElementsByTagName('h2')[0],
-          bg = _this.getElementsByClassName('bgcolor')[0],
-          st = _this.scrollTop;
 
+
+var swipeScrollParallax = function(){
+    var i = mySwiper.activeIndex;
+
+    var h2 = swiperSlide[i].getElementsByTagName('h2')[0],
+        bg = swiperSlide[i].getElementsByClassName('bgcolor')[0],
+        st;
+
+    swiperSlide[i].addEventListener('scroll', function(){
+      st = this.scrollTop;
       h2.style.opacity = 1 - (st/100);
       nav1.style.opacity = 1 - (st/250);
       nav2.style.top = nav1t - st/1.8 + 'px';
@@ -41,7 +44,6 @@ var swipeScrollParallax = function(){
         nav3[i].classList.remove('active');
       };
     });
-  };
 };
 
 var navClickMoveTo = function(){
@@ -76,6 +78,7 @@ var changeNavIndex = function(){
 mySwiper.on('slideChange', function () {
   resetParallax();
   changeNavIndex();
+  swipeScrollParallax();
 });
 
 window.addEventListener('DOMContentLoaded', function(){
@@ -84,4 +87,4 @@ window.addEventListener('DOMContentLoaded', function(){
 });
 
 //
-})();
+// })();
