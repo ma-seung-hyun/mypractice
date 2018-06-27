@@ -1,6 +1,18 @@
 // (function(){
 //
 
+var computedStyleX = function () {
+  if (!window.getComputedStyle) {
+    window.getComputedStyle = function(element) {
+      return element.currentStyle;
+    };
+  }
+};
+
+var style = function(el,pr){
+  return window.getComputedStyle(el, null);
+}
+
 var nav = document.getElementsByClassName('swipe-nav')[0],
     nav1 = nav.getElementsByClassName('nav-top')[0],
     nav2 = nav.getElementsByClassName('nav-middle')[0],
