@@ -18,6 +18,7 @@ var nav = document.getElementsByClassName('swipe-nav')[0],
     nav2 = nav.getElementsByClassName('nav-middle')[0],
     navItem = nav2.getElementsByClassName('nav-item'),
     nav3 = document.getElementsByClassName('nav-filter'),
+    swiperWrapper = document.getElementsByClassName('swiper-wrapper')[0],
     swiperSlide = document.getElementsByClassName('swiper-slide');
 
 var nav1t = window.innerHeight / 100 * 23.75;
@@ -32,13 +33,12 @@ var mySwiper = new Swiper ('.swiper-container', {
 
 
 var swipeScrollParallax = function(){
-    var i = mySwiper.activeIndex;
-
-    var h2 = swiperSlide[i].getElementsByTagName('h2')[0],
-        bg = swiperSlide[i].getElementsByClassName('bgcolor')[0],
-        st;
+  for(let i = 0; i < swiperSlide.length; ++i){
+    let h2 = swiperSlide[i].getElementsByTagName('h2')[0],
+        bg = swiperSlide[i].getElementsByClassName('bgcolor')[0];
 
     swiperSlide[i].addEventListener('scroll', function(){
+      console.log(h2);
       st = this.scrollTop;
       h2.style.opacity = 1 - (st/100);
       nav1.style.opacity = 1 - (st/250);
@@ -56,6 +56,7 @@ var swipeScrollParallax = function(){
         nav3[i].classList.remove('active');
       };
     });
+  };
 };
 
 var navClickMoveTo = function(){
@@ -67,14 +68,15 @@ var navClickMoveTo = function(){
 };
 
 var resetParallax = function(){
+  nav1.style.opacity = 1;
+  nav2.style.top = nav1t + 'px';
+  nav2.classList.remove('active');
+
   for(let i = 0; swiperSlide.length > i; ++i){
     let h2 = swiperSlide[i].getElementsByTagName('h2')[0],
         bg = swiperSlide[i].getElementsByClassName('bgcolor')[0];
 
     h2.style.opacity = 1;
-    nav1.style.opacity = 1;
-    nav2.style.top = nav1t + 'px';
-    nav2.classList.remove('active');
     nav3[i].classList.remove('active');
     bg.style.top = 0;
     swiperSlide[i].scrollTop = 0;
@@ -87,10 +89,13 @@ var changeNavIndex = function(){
   navItem[p].classList.remove('active');
 };
 
-mySwiper.on('slideChange', function () {
+mySwiper.on('slideChange', function (){
   resetParallax();
   changeNavIndex();
-  swipeScrollParallax();
+  // swipeScrollParallax();
+});
+mySwiper.on('slideChangeTransitionEnd', function(){
+  // swiperWrappesr.style.transform = 'none';
 });
 
 window.addEventListener('DOMContentLoaded', function(){
