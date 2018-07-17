@@ -63,7 +63,7 @@ class GoodState{
       })(this)}원 입니다.`
     );
       this.manager.minusCredit();
-      this.manager.changeState(new OverState(this.manager));
+      this.manager.changeState(new OverState(this.manager));d
     }else{
       this.manager.addBalance(-1 * amounts);
       console.log(`${amounts}원이 출금되었습니다.`);
@@ -120,5 +120,6 @@ class HoldState{
 //     console.log('대출 상태로 전환');
 //   }
 // };
+// 이건내일해야징
 
 var a = new BankManager();
