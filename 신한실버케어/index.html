@@ -15,6 +15,12 @@
 </head>
 
 <body>
+  <div id="readystate">
+    <div>
+      <p>준비중입니다.</p>
+      <p class="planetxt">상담문의 주시면 <br>친절히 알려드리겠습니다.</p>
+    </div>
+  </div>
   <div class="all-dimd">
     <div class="dimd-bg"></div>
     <div class="iframewrap">
@@ -35,12 +41,12 @@
         <span class="bar"></span>
       </div>
       <ul>
-        <li><a href="#">인사말<span class="bar"></span></a></li>
-        <li><a href="#">공지사항<span class="bar"  ></span></a></li>
-        <li><a href="#">방문요양<span class="bar"></span></a></li>
-        <li><a href="#">방문목욕<span class="bar"></span></a></li>
-        <li><a href="#">복지용구<span class="bar"></span></a></li>
-        <li><a href="#">오시는길<span class="bar"></span></a></li>
+        <li><a href="#" class="gnb-hello">인사말<span class="bar"></span></a></li>
+        <li><a href="#" class="gnb-notice disable">공지사항<span class="bar"></span></a></li>
+        <li><a href="#" class="disable">방문요양<span class="bar"></span></a></li>
+        <li><a href="#" class="disable">방문목욕<span class="bar"></span></a></li>
+        <li><a href="#" class="disable">복지용구<span class="bar"></span></a></li>
+        <li><a href="#" class="gnb-map">오시는길<span class="bar"></span></a></li>
       </ul>
     </div>
     <!-- <span class="m-togglebtn">버튼</span> -->
@@ -107,7 +113,7 @@
       <div class="cwrap">
         <ul class="introduce-ul">
           <li class="introduce-item">
-            <a href="#">
+            <a href="#" class="disable">
               <div class="introduce-dimd"></div>
               <div class="introduce-item-img">
                 <div></div>
@@ -120,7 +126,7 @@
             </a>
           </li>
           <li class="introduce-item">
-            <a href="#">
+            <a href="#" class="disable">
               <div class="introduce-dimd"></div>
               <div class="introduce-item-img">
                 <div></div>
@@ -133,7 +139,7 @@
             </a>
           </li>
           <li class="introduce-item">
-            <a href="#">
+            <a href="#" class="disable">
               <div class="introduce-dimd"></div>
               <div class="introduce-item-img">
                 <div></div>
@@ -236,13 +242,42 @@
 
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript">
+
+  
+  var readyStete = function(){
+    var disableBtn = document.getElementsByClassName('disable');
+    var readyState = document.getElementById('readystate');
+    console.log(disableBtn);
+    for(let i =0; i < disableBtn.length; ++i){
+      disableBtn[i].addEventListener('click', function(evt){
+        evt.preventDefault();
+        readyState.classList.add('on1');
+        (function(){
+          setTimeout(function(){
+            readyState.classList.add('on2');
+          },50,(function(){
+            setTimeout(function(){
+              readyState.classList.remove('on2');
+            },1500, (function(){
+              setTimeout(function(){
+                readyState.classList.remove('on1');
+              },1800);
+            })());
+          })());
+        })();
+      });
+    };
+  };
     var dimd = new indexDimdVideo();
+    var gnbMethod = new gnbMethod();
     var vid1 = document.getElementById('vid1');
 
-    window.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('DOMContentLoaded', function(){
       dimd.position();
       dimd.close();
       dimd.open();
+      readyStete(); // 나중삭제
+      gnbMethod.scroll();
     });
     // window.addEventListener('load', function() {
     //   vid1.play();

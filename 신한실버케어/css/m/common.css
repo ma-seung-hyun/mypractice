@@ -25,7 +25,7 @@ body{
   position: fixed; right: -70%;
   background-color: #fff;
   opacity: 0.6;
-  z-index: 9999;
+  z-index: 9998;
 }
 .gnb .m-togglebtn{
   display: inline-block;

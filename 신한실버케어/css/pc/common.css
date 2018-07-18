@@ -135,7 +135,6 @@ body{
   margin-left: 20px;
 }
 .gnb ul li a{
-
   color: rgba(38, 50, 50, 0.57);
   width: 100%;
   display: inline-block;
@@ -145,6 +144,66 @@ body{
   color: #333;
   font-weight: bold;
 }
+
+.gnb .m-main{
+  display: none;
+}
+.gnb .logo .bar{
+  display: inline-block;
+  width: 100%;
+  height: 100%; top: -100%;
+  padding: 0 10px; left: -8px;
+  position: absolute;
+  border-radius: 10px;
+
+  background: #30f264;
+  background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
+  background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
+  background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
+
+  opacity: 0.4;
+}
+.gnb .logo:hover a{
+  text-shadow: 2px 2px 4px rgba(97, 97, 97, 0.68);
+  color: #fff;
+  background: url(../../source/icon/logo_w2.png) no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 0 20px;
+  opacity: 1;
+}
+.gnb .logo:hover .bar{
+  top: -10px;
+  opacity: 0.6;
+}
+.gnb ul li .bar{
+  position: absolute;
+  display: inline-block;
+  width: 0%; height: 4px;
+  background-color: rgba(38, 50, 50, 0.12);
+  bottom: 20px; left: 50%;
+}
+.gnb ul li a:hover{
+  color: #263232;
+}
+.gnb ul li a:hover .bar{
+  width: 100%; left: 0;
+  background-color: #263232;
+}
+
+
+.gnb ul li a.disable{
+  color: #e2e2e2;
+  cursor:default;
+}
+.gnb ul li a.disable:hover{
+  color: #e2e2e2;
+}
+.gnb ul li a.disable .bar{
+  display: none;
+}
+
 
 
 
@@ -295,49 +354,3 @@ body{
 .footer-bottom-right li:hover{
   opacity: 1;
 }
-  .gnb .m-main{
-    display: none;
-  }
-  .gnb .logo .bar{
-    display: inline-block;
-    width: 100%;
-    height: 100%; top: -100%;
-    padding: 0 10px; left: -8px;
-    position: absolute;
-    border-radius: 10px;
-
-    background: #30f264;
-    background: -moz-linear-gradient(-45deg, #30f264 1%, #00e5d6 100%);
-    background: -webkit-linear-gradient(-45deg, #30f264 1%,#00e5d6 100%);
-    background: linear-gradient(135deg, #30f264 1%,#00e5d6 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30f264', endColorstr='#00e5d6',GradientType=1 );
-
-    opacity: 0.4;
-  }
-  .gnb .logo:hover a{
-    text-shadow: 2px 2px 4px rgba(97, 97, 97, 0.68);
-    color: #fff;
-    background: url(../../source/icon/logo_w2.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
-    background-position: 0 20px;
-    opacity: 1;
-  }
-  .gnb .logo:hover .bar{
-    top: -10px;
-    opacity: 0.6;
-  }
-  .gnb ul li .bar{
-    position: absolute;
-    display: inline-block;
-    width: 0%; height: 4px;
-    background-color: rgba(38, 50, 50, 0.12);
-    bottom: 20px; left: 50%;
-  }
-  .gnb ul li a:hover{
-    color: #263232;
-  }
-  .gnb ul li a:hover .bar{
-    width: 100%; left: 0;
-    background-color: #263232;
-  }
