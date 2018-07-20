@@ -2,8 +2,10 @@ body{
 }
 
 .swiper-container{
-  height: 500px; width: 500px;
+  height: 500px;
+  width: 100%; max-width:500px;
   border: 10px solid #ccc;
+  box-sizing: border-box;
 }
 .swiper-wrapper{
 
@@ -14,7 +16,8 @@ body{
 }
 .swiper-slide a{
   display: inline-block;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 100px;
   border: 1px solid #000;
 }
