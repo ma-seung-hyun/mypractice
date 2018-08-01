@@ -22,12 +22,17 @@ class App extends Component {
   componentWillMount(){
     console.log('will');
   }
+
+  state = {
+    greeting : 'hello'
+  };
+
   render() {
     console.log('render');
     return (
       <div className="App">
+        {this.state.greeting}
         {movies.map((movie,index) => {
-
           return <Movie title={movie.title} poster={movie.poster} key={index}/>
         })}
       </div>
